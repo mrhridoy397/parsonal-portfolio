@@ -590,23 +590,23 @@ require_once('./partials/header.php')
         cache: false,
         processData: false,
         success: function(result) {
-          // var result = JSON.parse(result);
-          // console.log(result);
-          // if (result.statusCode == 200) {
-          //   Swal.fire({
-          //     position: 'bottom-end',
-          //     icon: 'success',
-          //     title: result.Msg,
-          //     showConfirmButton: false,
-          //     timer: 3000
-          //   });
-          //   $('#massageSubmit').removeAttr('disabled');
-          //   $('#massageSubmit').text('Enroll');
-          //   setTimeout(() => {
-          //     location.reload();
-          //   }, 3000);
+          var result = JSON.parse(result);
+          console.log(result);
+          if (result.statusCode == 200) {
+            Swal.fire({
+              position: 'bottom-end',
+              icon: 'success',
+              title: result.Msg,
+              showConfirmButton: false,
+              timer: 3000
+            });
+            $('#massageSubmit').removeAttr('disabled');
+            $('#massageSubmit').text('Enroll');
+            setTimeout(() => {
+              location.reload();
+            }, 3000);
 
-          // }
+          }
           console.log(result);
         }
       });
