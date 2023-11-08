@@ -65,9 +65,15 @@ class CMSController extends Controller
         echo $data;
     }
 
-      // Settings
+      // Skills
       public function getSkills()
       {
           return $this->Model->skills();
       }
+
+        // Skills
+        public function getfacts()
+        {
+            return $this->Model->facts();
+        }
 }

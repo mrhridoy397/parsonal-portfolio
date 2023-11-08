@@ -89,7 +89,7 @@ class CMSModel extends Db
             }
         }
 
-          // testimonials index page
+          // skills index page
     public function skills()
     {
         $this->query("SELECT * FROM `skills` where `status` = 1");
@@ -104,6 +104,23 @@ class CMSModel extends Db
         }
         return array();
     }
+
+
+           // Facts index page
+           public function facts()
+           {
+               $this->query("SELECT * FROM `facts` where `status` = 1");
+               $this->execute();
+       
+               $facts = $this->fetchAll();
+               if (!empty($facts)) {
+                   $Response = array(
+                       $facts
+                   );
+                   return $Response;
+               }
+               return array();
+           }
 
         
 }

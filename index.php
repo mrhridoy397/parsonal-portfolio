@@ -8,6 +8,7 @@ $about = $hero->getAbout();
 $testimonial = $hero->gettestimonials();
 $settings = $hero->getSetting();
 $skill = $hero->getSkills();
+$Fact = $hero->getfacts();
 ?>
 
 
@@ -139,38 +140,43 @@ require_once('./partials/header.php')
       </div>
 
       <div class="row no-gutters">
+        <?php
+        foreach ($Fact as $value) {
 
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-          <div class="count-box">
-            <i class="bi bi-emoji-smile"></i>
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Happy Clients</strong> consequuntur quae</p>
-          </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+        ?>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span><?php echo  $value[0]['success']; ?></span>
+              <p><strong><?php echo  $value[0]['title']; ?></strong></p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="count-box">
-            <i class="bi bi-headset"></i>
-            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span><?php echo  $value[1]['success']; ?></span>
+              <p><strong><?php echo  $value[1]['title']; ?></strong></p>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="count-box">
-            <i class="bi bi-people"></i>
-            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span><?php echo  $value[2]['success']; ?></span>
+              <p><strong><?php echo  $value[2]['title']; ?></strong></p>
+            </div>
           </div>
-        </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span><?php echo  $value[3]['success']; ?></span>
+              <p><strong><?php echo  $value[3]['title']; ?></strong></p>
+            </div>
+          </div>
+        <?php } ?>
 
       </div>
 
@@ -187,23 +193,23 @@ require_once('./partials/header.php')
       </div>
 
       <div class="row skills-content">
-        <?php 
-          foreach ($skill[0] as  $value) {
-            
-          
+        <?php
+        foreach ($skill[0] as  $value) {
+
+
         ?>
 
-        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-lg-12" data-aos="fade-up">
 
-          <div class="progress">
-            <span class="skill"><?php echo $value['name'] ?><i class="val"><?php echo $value['skills'] ?></i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress">
+              <span class="skill"><?php echo $value['name'] ?><i class="val"><?php echo $value['skills'] ?></i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-          </div>
 
-        </div>
-        <?php }?>
+          </div>
+        <?php } ?>
 
       </div>
 
