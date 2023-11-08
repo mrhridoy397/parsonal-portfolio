@@ -64,4 +64,10 @@ class CMSController extends Controller
         $data = $this->Model->CreateMassege($Payload);
         echo $data;
     }
+
+      // Settings
+      public function getSkills()
+      {
+          return $this->Model->skills();
+      }
 }

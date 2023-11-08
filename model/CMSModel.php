@@ -88,4 +88,22 @@ class CMSModel extends Db
                 return json_encode($data);
             }
         }
+
+          // testimonials index page
+    public function skills()
+    {
+        $this->query("SELECT * FROM `skills` where `status` = 1");
+        $this->execute();
+
+        $skills = $this->fetchAll();
+        if (!empty($skills)) {
+            $Response = array(
+                $skills
+            );
+            return $Response;
+        }
+        return array();
+    }
+
+        
 }
