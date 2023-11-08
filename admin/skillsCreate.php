@@ -1,9 +1,9 @@
-<?php require_once('./controller/heroController.php'); ?>
+<?php require_once('./controller/skillsController.php'); ?>
 <?php
-$Hero = new HeroController();
+$skills = new skillsController();
 $Response = [];
-$active = $Hero->active;
-if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $Hero->createHero($_REQUEST);
+$active = $skills->active;
+if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $skills->createskills($_REQUEST);
 
 ?>
 <!DOCTYPE html>
@@ -44,8 +44,8 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $Hero->createHero($_RE
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Create Hero</h1>
-                        <a href="heroIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All Hero</a>
+                        <h1 class="h3 mb-0 text-gray-800">Create Skills</h1>
+                        <a href="skillsIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All Skills</a>
                     </div>
                     <?php if (isset($Response['status']) && !$Response['status']) : ?>
                         <br>
@@ -60,34 +60,25 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $Hero->createHero($_RE
                         <div class="col-md-7 offset-md-2">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Create at Hero</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Create at Skills</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" class="form-signin" >
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-signin" >
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="Name">Name</label>
-                                                <input type="text" id="Name" class="form-control form-control-user" placeholder="Enter name " name="Name" required autofocus value="<?php if (isset($_POST['Name'])) echo $_POST['Name']; ?>">
-                                                <?php if (isset($Response['Name']) && !empty($Response['Name'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['Name']; ?></small>
+                                                <label for="name">Name</label>
+                                                <input type="text" id="name" class="form-control form-control-user" placeholder="Enter name " name="name" required autofocus value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>">
+                                                <?php if (isset($Response['name']) && !empty($Response['name'])) : ?>
+                                                    <small class="text-danger"><?php echo $Response['name']; ?></small>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="subject">Subject</label>
-                                                <input type="text" id="subject" class="form-control form-control-user" placeholder="Enter Subject " name="subject" required autofocus value="<?php if (isset($_POST['subject'])) echo $_POST['subject']; ?>">
-                                                <?php if (isset($Response['subject']) && !empty($Response['subject'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['subject']; ?></small>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
-                                            <div class="form-group">
-                                                <label for="title">Title</label>
-                                                <input type="text" id="title" class="form-control form-control-user" placeholder="Enter title " name="title" required autofocus value="<?php if (isset($_POST['title'])) echo $_POST['title']; ?>">
-                                                <?php if (isset($Response['title']) && !empty($Response['title'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['title']; ?></small>
+                                                <label for="skills">Skills</label>
+                                                <input type="text" id="skills" class="form-control form-control-user" placeholder="Enter Skills " name="skills" required autofocus value="<?php if (isset($_POST['skills'])) echo $_POST['skills']; ?>">
+                                                <?php if (isset($Response['skills']) && !empty($Response['skills'])) : ?>
+                                                    <small class="text-danger"><?php echo $Response['skills']; ?></small>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
@@ -103,7 +94,7 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $Hero->createHero($_RE
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 text-center">
                                             <button class="btn btn-md btn-primary btn-primary" type="submit">Save Hero</button>
-                                            <a href="heroIndex.php" class="btn btn-md btn-primary btn-danger">Cencle</a>
+                                            <a href="skillsIndex.php" class="btn btn-md btn-primary btn-danger">Cencle</a>
                                         </div>
                                     </form>
                                 </div>

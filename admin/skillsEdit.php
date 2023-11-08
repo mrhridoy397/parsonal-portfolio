@@ -1,10 +1,10 @@
-<?php require_once('./controller/heroController.php'); ?>
+<?php require_once('./controller/skillsController.php'); ?>
 <?php
-$Hero = new HeroController();
+$skills = new skillsController();
 $Response = [];
-$active = $Hero->active;
-$data = $Hero->Heroedit($_REQUEST['id']);
-if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $Hero->SliderUpdate($_REQUEST);
+$active = $skills->active;
+$data = $skills->skillsedit($_REQUEST['id']);
+if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $skills->skillsUpdate($_REQUEST);
 
 ?>
 
@@ -47,7 +47,7 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $Hero->Slide
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Edit <?php echo $active; ?></h1>
-                        <a href="heroIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All <?php echo $active; ?></a>
+                        <a href="skillsIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All <?php echo $active; ?></a>
                     </div>
                     <?php if (isset($Response['status']) && !$Response['status']) : ?>
                         <br>
@@ -65,32 +65,23 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $Hero->Slide
                                     <h6 class="m-0 font-weight-bold text-primary">Edit <?php echo $active; ?></h6>
                                 </div>
                                 <div class="card-body">
-                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-signin" enctype="multipart/form-data">
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-signin">
                                         <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="Name" class="sr-only">Name</label>
-                                                <input type="text" id="Name" class="form-control form-control-user" placeholder="Enter Name " name="Name" required autofocus value="<?php if (isset($_POST['Name'])) {   echo $_POST['Name'];   } else {    echo $data['Name'];   } ?>">
-                                                <?php if (isset($Response['Name']) && !empty($Response['Name'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['Name']; ?></small>
+                                                <label for="name" class="sr-only">Name</label>
+                                                <input type="text" id="name" class="form-control form-control-user" placeholder="Enter Name " name="name" required autofocus value="<?php if (isset($_POST['name'])) {   echo $_POST['name'];   } else {    echo $data['name'];   } ?>">
+                                                <?php if (isset($Response['name']) && !empty($Response['name'])) : ?>
+                                                    <small class="text-danger"><?php echo $Response['name']; ?></small>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
                                             <div class="form-group">
-                                                <label for="subject">Subject</label>
-                                                <input type="text" id="subject" class="form-control form-control-user" placeholder=" Enter Subject " name="subject" required autofocus value="<?php if (isset($_POST['subject'])) {  echo $_POST['subject'];    } else {    echo $data['subject']; } ?>">
-                                                <?php if (isset($Response['subject']) && !empty($Response['subject'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['subject']; ?></small>
-                                                <?php endif; ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 mt-4">
-                                            <div class="form-group">
-                                                <label for="title">Title</label>
-                                                <input type="text" id="title" class="form-control form-control-user" placeholder=" Enter Title " name="title" required autofocus value="<?php if (isset($_POST['title'])) { echo $_POST['title']; } else {  echo $data['title']; } ?>">
-                                                <?php if (isset($Response['title']) && !empty($Response['title'])) : ?>
-                                                    <small class="text-danger"><?php echo $Response['title']; ?></small>
+                                                <label for="skills">Subject</label>
+                                                <input type="text" id="skills" class="form-control form-control-user" placeholder=" Enter Subject " name="skills" required autofocus value="<?php if (isset($_POST['skills'])) {  echo $_POST['skills'];    } else {    echo $data['skills']; } ?>">
+                                                <?php if (isset($Response['skills']) && !empty($Response['skills'])) : ?>
+                                                    <small class="text-danger"><?php echo $Response['skills']; ?></small>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
@@ -107,7 +98,7 @@ if (isset($_REQUEST['submit']) && count($_REQUEST) > 1) $Response = $Hero->Slide
                                    </div>
                                 <div class="form-group text-center mt-5">
                                     <button class="btn btn-primary" type="submit" name="submit">Update</button>
-                                    <a href="heroIndex.php" class="btn btn-danger">Cancle</a>
+                                    <a href="skillsIndex.php" class="btn btn-danger">Cancle</a>
                                 </div>
                                 </form>
                             </div>
