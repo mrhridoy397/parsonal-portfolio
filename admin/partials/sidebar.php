@@ -55,13 +55,28 @@
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Testimoninal" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-thumbs-up"></i>
+         <i class="fas fa-user-circle"></i>
              <span>Testimoninals</span>
          </a>
          <div id="Testimoninal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  <a class="collapse-item" href="TestimoninalIndex.php">All Testimoninal</a>
                  <a class="collapse-item" href="TestimoninalCreate.php">Create Testimoninal</a>
+             </div>
+         </div>
+     </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#massage" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-sms"></i>
+             <span>Message</span>
+         </a>
+         <div id="massage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="contactIndex.php">All Message</a>
              </div>
          </div>
      </li>

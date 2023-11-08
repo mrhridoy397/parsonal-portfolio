@@ -5,7 +5,7 @@
         &copy; Copyright <strong><span>iPortfolio</span></strong>
       </div>
       <div class="credits">
-        Designed by <a href=""></a>
+        Designed and Development by Mahmudur Rahman <a href=""></a>
       </div>
     </div>
   </footer><!-- End  Footer -->
