@@ -83,4 +83,11 @@ class CMSController extends Controller
         {
             return $this->Model->services();
         }
+
+
+         // portfolio
+         public function getportfolio()
+         {
+             return $this->Model->portfolio();
+         }
 }
