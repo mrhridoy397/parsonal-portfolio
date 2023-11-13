@@ -23,7 +23,7 @@
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#hero" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-chevron-circle-right"></i>
+             <i class="fas fa-chevron-circle-right"></i>
              <span>HeroAria</span>
          </a>
          <div id="hero" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -39,7 +39,7 @@
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#About" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-angle-double-right"></i>
+             <i class="fas fa-angle-double-right"></i>
              <span>About</span>
          </a>
          <div id="About" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -50,12 +50,12 @@
          </div>
      </li>
 
-       <!-- Divider -->
-       <hr class="sidebar-divider my-0">
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Testimoninal" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-user-circle"></i>
+             <i class="fas fa-user-circle"></i>
              <span>Testimoninals</span>
          </a>
          <div id="Testimoninal" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -66,12 +66,12 @@
          </div>
      </li>
 
-       <!-- Divider -->
-       <hr class="sidebar-divider my-0">
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#skills" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fab fa-speakap"></i>
+             <i class="fab fa-speakap"></i>
              <span>Skills</span>
          </a>
          <div id="skills" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -81,12 +81,12 @@
          </div>
      </li>
 
-       <!-- Divider -->
-       <hr class="sidebar-divider my-0">
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Services" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fab fa-speakap"></i>
+             <i class="fab fa-speakap"></i>
              <span>Services</span>
          </a>
          <div id="Services" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -96,12 +96,27 @@
          </div>
      </li>
 
-       <!-- Divider -->
-       <hr class="sidebar-divider my-0">
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#portfolio" aria-expanded="true" aria-controls="collapsePages">
+             <i class="fas fa-file-powerpoint"></i>
+             <span>Services</span>
+         </a>
+         <div id="portfolio" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+             <div class="bg-white py-2 collapse-inner rounded">
+                 <a class="collapse-item" href="portfolioIndex.php">All Portfolio</a>
+             </div>
+         </div>
+     </li>
+
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Facts" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fab fa-react"></i>
+             <i class="fab fa-react"></i>
              <span>Facts</span>
          </a>
          <div id="Facts" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -112,12 +127,12 @@
      </li>
 
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#massage" aria-expanded="true" aria-controls="collapsePages">
-         <i class="fas fa-sms"></i>
+             <i class="fas fa-sms"></i>
              <span>Message</span>
          </a>
          <div id="massage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -127,21 +142,21 @@
          </div>
      </li>
 
-       <!-- Divider -->
-       <hr class="sidebar-divider d-none d-md-block">
+     <!-- Divider -->
+     <hr class="sidebar-divider d-none d-md-block">
      <!-- Sidebar Toggler (Sidebar) -->
      <li class="nav-item">
          <a class="nav-link collapsed" href="SettingEdit.php">
              <i class="fas fa-cogs fa-sm text-white-50"></i>
              <span>Settings</span>
          </a>
-         </li>
+     </li>
 
 
-         <hr class="sidebar-divider d-none d-md-block">
+     <hr class="sidebar-divider d-none d-md-block">
      <!-- Sidebar Toggler (Sidebar) -->
      <div class="text-center d-none d-md-inline">
-         <button class="rounded-circle border-0" id="sidebarToggle"></button> 
+         <button class="rounded-circle border-0" id="sidebarToggle"></button>
      </div>
 
  </ul>

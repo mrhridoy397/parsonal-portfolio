@@ -1,3 +1,20 @@
+<?php require_once('./controller/CMSController.php'); ?>
+<?php
+$hero = new CMSController();
+$Response = [];
+$active = $hero->active;
+$index = $hero->getHero();
+$about = $hero->getAbout();
+$testimonial = $hero->gettestimonials();
+$settings = $hero->getSetting();
+$skill = $hero->getSkills();
+$Fact = $hero->getfacts();
+$service = $hero->getservices();
+?>
+
+
+
+
 <?php
 require_once('./partials/header.php')
 ?>
@@ -13,7 +30,7 @@ require_once('./partials/header.php')
       <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
       <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
       <div class="social-links mt-3 text-center">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
@@ -23,7 +40,7 @@ require_once('./partials/header.php')
 
     <nav id="navbar" class="nav-menu navbar">
       <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="index.php" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
@@ -43,7 +60,7 @@ require_once('./partials/header.php')
       <div class="d-flex justify-content-between align-items-center">
         <h2>Inner Page</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li>Inner Page</li>
         </ol>
       </div>

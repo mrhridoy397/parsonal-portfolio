@@ -122,5 +122,22 @@ class CMSModel extends Db
                return array();
            }
 
+               // services index page
+               public function services()
+               {
+                   $this->query("SELECT * FROM `services` where `status` = 1");
+                   $this->execute();
+           
+                   $services = $this->fetchAll();
+                   if (!empty($services)) {
+                       $Response = array(
+                           $services
+                       );
+                       return $Response;
+                   }
+                   return array();
+               }
+    
+
         
 }

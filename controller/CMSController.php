@@ -76,4 +76,11 @@ class CMSController extends Controller
         {
             return $this->Model->facts();
         }
+
+        
+        // services
+        public function getservices()
+        {
+            return $this->Model->services();
+        }
 }
