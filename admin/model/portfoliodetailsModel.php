@@ -9,13 +9,13 @@ class portfoliodetailsModels extends Db
      **/
     public function indexportfoliodetails()
     {
-        $this->query("SELECT * FROM `table_galary`");
+        $this->query("SELECT * FROM `portfoliodetails`");
         $this->execute();
 
-        $galary = $this->fetchAll();
-        if (!empty($galary)) {
+        $portfolio = $this->fetchAll();
+        if (!empty($portfolio)) {
             $Response = array(
-               $galary
+               $portfolio
             );
             return $Response;
         }
@@ -82,9 +82,9 @@ class portfoliodetailsModels extends Db
         $this->bind('id', $id);
         $this->execute();
 
-        $portfoliodetails = $this->fetch();
-        if (!empty($portfoliodetails)) {
-              return  $portfoliodetails; 
+        $portfolio = $this->fetch();
+        if (!empty($portfolio)) {
+              return  $portfolio; 
         }
     }
 

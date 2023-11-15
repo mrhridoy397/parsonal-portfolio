@@ -74,7 +74,7 @@ class portfoliodetailsController extends Controller
         }
         else{
             $Response['status'] = 'Congress! you data added successfully';
-            header("location: ./GalaryIndex.php");
+            header("location: portfoliodetailsIndex.php");
             return $Response;
         }
     }
@@ -126,7 +126,7 @@ class portfoliodetailsController extends Controller
         }
         else{
             $Response['status'] = 'Congress! you data Update successfully';
-            header("location: ./GalaryIndex.php");
+            header("location: portfoliodetailsIndex.php");
             return $Response;
         }
     }
@@ -147,12 +147,12 @@ class portfoliodetailsController extends Controller
         $response = $this->Model->deleteportfoliodetails($id);
         if(!$response){
             $Response['status'] = 'Sorry, An unexpected error occurred and your request could not be completed.';
-            header("location: ./GalaryIndex.php");
+            header("location: portfoliodetailsIndex.php");
             return $Response;
         }
         else{
             $Response['status'] = 'Congress! you data Update successfully';
-            header("location: ./GalaryIndex.php");
+            header("location: portfoliodetailsIndex.php");
             return $Response;
         }
     }
