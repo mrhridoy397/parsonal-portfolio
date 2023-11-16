@@ -14,7 +14,7 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $portfolio->createport
     <?php
     include_once('./partials/meta.php');
     ?>
-    <title><?php echo ucfirst($active); ?> - Educafe</title>
+    <title><?php echo ucfirst($active); ?> - Portfolio</title>
 </head>
 
 <body id="page-top">
@@ -45,8 +45,8 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $portfolio->createport
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Create Galary</h1>
-                        <a href="GalaryIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All Galary</a>
+                        <h1 class="h3 mb-0 text-gray-800">Create portfoliodetails</h1>
+                        <a href="portfoliodetailsIndex.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-users-cog fa-sm text-white-50"></i> All portfoliodetails</a>
                     </div>
                     <?php if (isset($Response['status']) && !$Response['status']) : ?>
                         <br>
@@ -61,7 +61,7 @@ if (isset($_REQUEST) && count($_REQUEST) > 0) $Response = $portfolio->createport
                         <div class="col-md-7 offset-md-2">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Create at Galary</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Create at portfoliodetails</h6>
                                 </div>
                                 <div class="card-body">
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" class="form-signin" >

@@ -14,7 +14,7 @@ $Index = $portfolio->getindexportfoliodetails();
     <?php
     include_once('./partials/meta.php');
     ?>
-    <title><?php echo ucfirst($active); ?> - Educafe</title>
+    <title><?php echo ucfirst($active); ?> - Portfolio</title>
 </head>
 
 <body id="page-top">
@@ -167,10 +167,9 @@ $Index = $portfolio->getindexportfoliodetails();
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Delete" below if you are ready to Remove current Filds.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" id="deletemain">delete</a>
+                    <button class="btn btn-info" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger" id="deletemain">Yes Delete</a>
                 </div>
             </div>
         </div>

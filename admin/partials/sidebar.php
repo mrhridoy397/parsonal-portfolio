@@ -102,11 +102,12 @@
      <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#portfolio" aria-expanded="true" aria-controls="collapsePages">
              <i class="fas fa-file-powerpoint"></i>
-             <span>Services</span>
+             <span>Portfolio</span>
          </a>
          <div id="portfolio" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  <a class="collapse-item" href="portfolioIndex.php">All Portfolio</a>
+                 <a class="collapse-item" href="portfoliodetailsIndex.php">All Portfoliodetails</a>
              </div>
          </div>
      </li>
