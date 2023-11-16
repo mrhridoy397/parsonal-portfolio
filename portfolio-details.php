@@ -10,6 +10,9 @@ $settings = $hero->getSetting();
 $skill = $hero->getSkills();
 $Fact = $hero->getfacts();
 $service = $hero->getservices();
+$portfoli = $hero->port($_REQUEST['gid']);
+// var_dump($portfoli);
+
 ?>
 
 
@@ -75,21 +78,17 @@ require_once('./partials/header.php')
       <div class="container">
 
         <div class="row gy-4">
+        <?php
+               
+               if(!empty($portfoli)){
+               foreach ($portfoli as $item) {
+               ?>
 
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img src="<?php echo $item['image'] ?>" alt="">
                 </div>
 
               </div>
@@ -99,21 +98,20 @@ require_once('./partials/header.php')
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3><?php echo $item['title'] ?></h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Category</strong>: <?php echo $item['Category'] ?></li>
+                <li><strong>Client</strong>: <?php echo $item['Client'] ?></li>
+                <li><strong>Project date</strong>: <?php echo $item['Projectdate'] ?></li>
+                <li><strong>Project URL</strong>: <a href="<?php echo $item['ProjectURL'] ?>"><?php echo $item['ProjectURL'] ?></a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
+              <h2><?php echo $item['shortTitle'] ?></h2>
+              <p><?php echo $item['description'] ?></p>
             </div>
           </div>
+          <?php } }else{ echo "Empty" ;} ?>
 
         </div>
 

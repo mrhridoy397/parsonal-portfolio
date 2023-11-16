@@ -90,4 +90,10 @@ class CMSController extends Controller
          {
              return $this->Model->portfolio();
          }
+
+           // portfoliodetails for portfolio-details page
+           public function port($id)
+           {
+               return $this->Model->portfoliodetails($id);
+           }
 }
